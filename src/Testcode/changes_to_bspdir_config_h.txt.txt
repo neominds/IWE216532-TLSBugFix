@@ -1,0 +1,7 @@
+Add following to ~\target\config\<bspdir>\config.h
+
+#define USER_APPL_INIT \
+{ \
+IMPORT int wrkkssltest (); \
+taskSpawn ("tWrkkssltest", 30, 0, 3000, wrkkssltest, 0, 0, 0,0,0,0,0,0,0,0); \
+}
